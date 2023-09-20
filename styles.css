@@ -1,0 +1,185 @@
+:root {
+    --primary-color: 230, 57, 57;
+    --secondary-color: rgb(255, 100, 100);
+    --text-color: white;
+    --shadow: rgb(34, 34, 34);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    overflow-x: hidden;
+    background-image: url('images/restaurant.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-bar {
+    background-color: rgba(var(--primary-color), 0.93);
+    width: 100vw;
+    height: 40px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 10px 0 var(--shadow);
+    position: sticky;
+    top: 0;
+}
+
+.navigation-links {
+    max-width: 1000px;
+    list-style-type: none;
+    display: flex;
+    flex: 1;
+    gap: 4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0 20px 0 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation-links > li:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.active {
+    background-color: rgb(255, 240, 240);
+    padding: 10px;
+    color: rgb(var(--primary-color));
+}
+
+li.logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo > div {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+li.logo > span {
+    font-size: 2rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    gap: 60px;
+    width: 1000px;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 10px 0 var(--shadow);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 20px;
+}
+
+.text > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--secondary-color);
+}
+
+.information {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    gap: 60px;
+}
+
+.information > div {
+    display: flex;
+    gap: 15px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.big {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.small {
+    font-size: 0.8rem;
+}
+
+.red {
+    color: var(--secondary-color);
+}
+
+.group {
+    min-width: 300px;
+}
+
+.drinks > h1, .food > h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+}
+
+.item {
+    display: flex;
+}
+
+.item > .name {
+    margin-right: auto;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 10px 0 var(--shadow);
+    height: 30px;
+}
