@@ -42,6 +42,7 @@ body {
     box-shadow: 0 0 10px 0 var(--shadow);
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 .navigation-links {
@@ -93,6 +94,7 @@ li.logo > span {
     width: 1000px;
     min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
     box-shadow: 0 0 10px 0 var(--shadow);
 }
 
