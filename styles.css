@@ -24,21 +24,26 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    color: var(--text-color);
+    min-width: 500px;
 }
 
-#content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:visited, a:active {
+    color: inherit;
 }
 
 .top-bar {
-    background-color: rgba(var(--primary-color), 0.93);
-    width: 100vw;
-    height: 40px;
-    padding: 30px;
+    background-color: rgba(var(--primary-color), 0.98);
+    min-width: 100%;
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
     box-shadow: 0 0 10px 0 var(--shadow);
     position: sticky;
     top: 0;
@@ -46,21 +51,63 @@ body {
 }
 
 .navigation-links {
-    max-width: 1000px;
-    list-style-type: none;
     display: flex;
-    flex: 1;
-    gap: 4rem;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
-    padding: 0 20px 0 20px;
-    justify-content: center;
-    align-items: center;
+    list-style: none;
 }
 
+li.hamburger {
+    display: none;
+}
+
+li.hamburger > span {
+    font-size: 2.4rem;
+}
+
+@media screen and (max-width: 605px) {
+    .navigation-links li:not(:first-child) {display: none;}
+    .navigation-links li.hamburger {
+      display: flex;
+      align-items: center;
+    }
+    .navigation-links.responsive {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .navigation-links.responsive .logo {
+        display: flex;
+    }
+    .navigation-links.responsive li.hamburger {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+    .navigation-links.responsive li {
+        display: block;
+    }
+}  
+
+@media screen and (min-width: 700px) {
+    iframe.google-map {
+        width: 600px;
+        height: 600px;
+    }
+}  
+
 .navigation-links > li:hover {
-    scale: 1.1;
     cursor: pointer;
+}
+
+.navigation-links > li:not(:first-child):hover {
+    color: rgb(255, 176, 176);
 }
 
 .active {
@@ -89,9 +136,10 @@ li.logo > span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px;
-    gap: 60px;
-    width: 1000px;
+    padding: 40px;
+    gap: 80px;
+    width: 95%;
+    max-width: 1000px;
     min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(10px);
@@ -103,13 +151,20 @@ li.logo > span {
     flex-direction: column;
     align-items: center;
     font-size: 1.2rem;
-    gap: 20px;
+    gap: 30px;
 }
 
-.text > div {
+.group > h2 {
+    margin-bottom: 5px;
+}
+
+.visit {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 0 20px;
 }
 
 h1 {
@@ -118,15 +173,28 @@ h1 {
 }
 
 .information {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-content: center;
-    gap: 60px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 600px;
 }
 
 .information > div {
     display: flex;
     gap: 15px;
+    min-width: 200px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socials > .icons {
+    display: flex;
 }
 
 .material-symbols-outlined {
@@ -138,8 +206,12 @@ h1 {
 }
 
 .big {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 800;
+}
+
+.icon {
+    font-size: 2.1rem !important;
 }
 
 .small {
@@ -159,6 +231,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .items {
@@ -174,6 +247,11 @@ h1 {
 
 .item > .name {
     margin-right: auto;
+}
+
+.google-map {
+    width: 340px;
+    height: 340px;
 }
 
 .footer {
