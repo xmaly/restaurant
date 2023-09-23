@@ -8,6 +8,7 @@ const logoLink = document.querySelector("li.logo");
 const homeLink = document.querySelector("li.home");
 const menuLink = document.querySelector("li.menu");
 const contactLink = document.querySelector("li.contact");
+const hamburger = document.querySelector(".hamburger");
 
 logoLink.addEventListener("click", () => {
     contentContainer.innerHTML = renderHomePage();
@@ -31,6 +32,15 @@ contactLink.addEventListener("click", () => {
     contentContainer.innerHTML = renderContactPage();
     resetActiveClasses();
     contactLink.classList.add("active");
+} );
+
+hamburger.addEventListener("click", () => {
+    var navLinks = document.querySelector("#nav");
+    if (navLinks.className === "navigation-links") {
+        navLinks.className += " responsive";
+    } else {
+        navLinks.className = "navigation-links";
+    }
 } );
 
 const resetActiveClasses = () => {
