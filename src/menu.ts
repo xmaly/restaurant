@@ -1,5 +1,5 @@
-const renderMenuPage = (() => {
-    return `
+const renderMenuPage = () => {
+  return `
         <div class="drinks">
             <h1 class="red">Drinks</h1>
             <div class="items">
@@ -133,7 +133,6 @@ const renderMenuPage = (() => {
         <div class="small red">
             * information about allergens shall be provided on request
         </div>`;
-    });
-
+};
 
 export { renderMenuPage };
